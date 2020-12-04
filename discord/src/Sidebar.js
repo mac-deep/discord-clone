@@ -15,10 +15,11 @@ import { selectUser } from './features/userSlice';
 
 function Sidebar() {
     const user = useSelector(selectUser);
+    console.log("Sidebar",user);
     return (
         <div className='sidebar'>
             <div className="sidebar__top">
-                <h3>Clever programmer</h3>
+                <h3>Deep's chatRoom</h3>
                 <ExpandMoreIcon />
             </div>
 
