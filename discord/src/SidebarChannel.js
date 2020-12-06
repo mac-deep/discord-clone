@@ -1,15 +1,28 @@
-import React from 'react'
-import './SidebarChannel.css'
+import React from "react";
+import { useDispatch } from "react-redux";
+import { setChannelInfo } from "./features/appSlice";
+import "./SidebarChannel.css";
 
 function SidebarChannel({ id, channelName }) {
-    return (
-        <div className="sidebarChannel">
-            <h4>
-                <span className="sidebarChannel__hash">#</span>{channelName}
-            </h4>
-            
-        </div>
-    )
+  const dispatch = useDispatch();
+  return (
+    <div
+      className="sidebarChannel"
+      onClick={() =>
+        dispatch(
+          setChannelInfo({
+            channelId: id,
+            channelName: channelName,
+          })
+        )
+      }
+    >
+      <h4>
+        <span className="sidebarChannel__hash">#</span>
+        {channelName}
+      </h4>
+    </div>
+  );
 }
 
-export default SidebarChannel
+export default SidebarChannel;
