@@ -45,14 +45,16 @@ function Chat() {
     <div className="chat">
       <ChatHeader channelName={channelName} />
 
-      <div className="chat__messages">
-        {messages.map((messages) => (
-          <Message
-            timestamp={messages.timestamp}
-            message={messages.message}
-            user={messages.user}
-          />
-        ))}
+      <div className="chat__messages scrollbar" id="style-2">
+        <div className="force-overflow">
+          {messages.map((messages) => (
+            <Message
+              timestamp={messages.timestamp}
+              message={messages.message}
+              user={messages.user}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="chat__input">

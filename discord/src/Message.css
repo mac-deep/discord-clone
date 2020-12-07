@@ -21,7 +21,7 @@
   background-color: #2f3135;
   padding: 15px;
   border-radius: 30px;
-  width: 60%;
+  /* width: 60%; */
 }
 
 .message__info > h4 > span:first-of-type {

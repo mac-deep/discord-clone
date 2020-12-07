@@ -40,37 +40,38 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__top">
-        <h1>
-          Welcome to chatRoom,<br></br>
-          <span>{user.displayName}</span>
-        </h1>
+        <h3>Welcome to chatRoom,</h3>
+        <br></br>
+        <h1>{user.displayName}</h1>
 
-        <ExpandMoreIcon />
+        {/* <ExpandMoreIcon /> */}
       </div>
 
-      <div className="sidebar__channels">
-        <div className="sidebar__channelsHeader">
-          <div className="sidebar__header">
-            {/* <ExpandMoreIcon /> */}
-            <h4>Text Channels</h4>
-          </div>
-          <AddIcon
-            className="sidebar__addChannel"
-            onClick={handleAddChannel}
-            alt={"add new channel"}
-          />
-        </div>
-        <div className="sidebar__channelsList">
-          {channels.map(({ id, channel }) => (
-            <SidebarChannel
-              key={id}
-              id={id}
-              channelName={channel.channelName}
+      <div className="sidebar__channels scrollbar" id="style-2">
+        <div className="force-overflow">
+          <div className="sidebar__channelsHeader">
+            <div className="sidebar__header">
+              {/* <ExpandMoreIcon /> */}
+              <h4>Text Channels</h4>
+            </div>
+            <AddIcon
+              className="sidebar__addChannel"
+              onClick={handleAddChannel}
+              alt={"add new channel"}
             />
-          ))}
+          </div>
+
+          <div className="sidebar__channelsList">
+            {channels.map(({ id, channel }) => (
+              <SidebarChannel
+                key={id}
+                id={id}
+                channelName={channel.channelName}
+              />
+            ))}
+          </div>
         </div>
       </div>
-
       <div className="sidebar__voice">
         <SignalCellularAltIcon
           className="sidebar__voiceIcons"
