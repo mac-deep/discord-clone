@@ -3,17 +3,18 @@
   place-items: center;
   height: 100vh;
   width: 100%;
+  background-color: #363a3f;
 }
 
 .login > button {
   width: 300px;
   background-color: #738adb;
-  color: white;
+  color: #2f3135;
   font-weight: 800;
 }
 
 .login > button:hover {
-  background-color: black;
+  background-color: #2f3135;
   color: #738adb;
 }
 .login > div > img {

@@ -13,4 +13,20 @@
   color: gray;
   margin-left: 20px;
   font-size: x-small;
+  font-style: italic;
+  padding-bottom: 50px;
+}
+
+.message__content {
+  background-color: #2f3135;
+  padding: 15px;
+  border-radius: 30px;
+  width: 60%;
+}
+
+.message__info > h4 > span:first-of-type {
+  background-color: rgba(255, 255, 0, 0.493);
+  padding: 10px;
+  border-radius: 20px;
+  color: black;
 }

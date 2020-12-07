@@ -7,15 +7,16 @@
 }
 
 .chat__input {
-  color: lightgray;
+  color: rgba(255, 255, 0, 0.493);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 10px;
   margin: 20px;
   border-top: 1px solid gray;
   background-color: #474b53;
+  box-shadow: 0 9px 10px -6px black;
 }
 
 .chat__input > form > input {
@@ -52,4 +53,9 @@
 .chat__messages {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.chat__message::-webkit-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

@@ -40,17 +40,25 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__top">
-        <h3>Deep's chatRoom</h3>
+        <h1>
+          Welcome to chatRoom,<br></br>
+          <span>{user.displayName}</span>
+        </h1>
+
         <ExpandMoreIcon />
       </div>
 
       <div className="sidebar__channels">
         <div className="sidebar__channelsHeader">
           <div className="sidebar__header">
-            <ExpandMoreIcon />
+            {/* <ExpandMoreIcon /> */}
             <h4>Text Channels</h4>
           </div>
-          <AddIcon className="sidebar__addChannel" onClick={handleAddChannel} />
+          <AddIcon
+            className="sidebar__addChannel"
+            onClick={handleAddChannel}
+            alt={"add new channel"}
+          />
         </div>
         <div className="sidebar__channelsList">
           {channels.map(({ id, channel }) => (
@@ -80,7 +88,12 @@ function Sidebar() {
       </div>
 
       <div className="sidebar__profile">
-        <Avatar onClick={() => auth.signOut()} src={user.photo} />
+        <Avatar
+          onClick={() => auth.signOut()}
+          src={user.photo}
+          variant="rounded"
+          // className={classes.rounded}
+        />
         <div className="sidebar__profileInfo">
           <h3>{user.displayName}</h3>
           <p>#{user.uid.substring(0, 7)}</p>
